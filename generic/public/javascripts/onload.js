@@ -26,14 +26,14 @@ $(document).ready(function() {
    * Handle get button clicks
   */
   $(".get-btn").click(function() {
-    handleRefresh(this.attr("id"));
+    handleRefresh($(this).attr("id"));
   });
 
   /**
    * Handle post button clicks
   */
   $(".post-btn").click(function() {
-    handleUpdate(this.attr("id"));
+    handleUpdate($(this).attr("id"));
   });
 
   /**

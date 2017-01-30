@@ -21,14 +21,14 @@ var handleRefresh = function(id) {
   */
   var handleResponse = function (response, err, urlMapDetails) {
     if(err) {
-      alert(err);
+      alert("Error: ", response);
       return;
     }
 
     /**
      * Set the result in the textbox
      */
-    $("#" + urlMapDetails[guiEltID]).val(response.json.result.value);
+    $("#" + urlMapDetails.guiEltID).val(response.json.result.value);
   };
 
   /**
@@ -49,8 +49,8 @@ var handleUpdate = function(id) {
   /**
   * Get the value in the textbox
   */
-  if($("#" + urlMapDetails[guiEltID]).val() == "") {
-    body.json.data.value = $("#" + urlMapDetails[guiEltID]).val();
+  if($("#" + urlMapDetails.guiEltID).val() == "") {
+    body.json.data.value = $("#" + urlMapDetails.guiEltID).val();
   } else {
     alert("Please enter a valid value");
     return;
@@ -82,9 +82,9 @@ var sendRequest = function(url, requestMethod, body, handleResponse, urlMapDetai
   * Send generic get or post JSOn request
   */
   $.ajax({
-    "method": method,
+    "method": requestMethod,
     "url": url,
-    "dataType": json,
+    "dataType": "json",
     "contentType": "application/json",
     "data": body,
     "success": function(response) {
