@@ -4,53 +4,81 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
   </head>
   <body>
     <div id="top-container">
-    	<div id="fixed-container">
-    		<div>
-    		</div>
-    	</div>	
-    	<div id="abs-container">
-    		<div id="header" class="navbar navbar-inverse">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                    <a href="#" class="navbar-left">
-                      <img class=logo alt="GV" src="/images/gv_logo.png">
-                    </a>
-                  <a class="navbar-brand" href="#">&nbsp;WebSiteName</a>
-                </div>
-                <div class="collapse navbar-collapse" id="top-nav">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Video</a></li>
-                    <li><a href="#">Audio</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Developer</a></li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
-                  </ul>
-                </div>
+      <!-- Fixed containers for user notifications -->
+      <div id="fixed-container">
+      </div>  
+
+      <!-- All gui elements -->
+      <div id="abs-container">
+        <div id="header" class="navbar navbar-inverse">
+          <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-left">
+              <img class=logo alt="GV" src="/images/gv_logo.png">
+            </a>
+            <a class="navbar-brand" href="#">&nbsp;WebSiteName</a>
+          </div>
+          <div class="collapse navbar-collapse" id="top-nav">
+            <ul class="nav navbar-nav">
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Audio</a></li>
+            <li class="active"><a href="#">Settings</a></li>
+            <li><a href="#">Developer</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+            </ul>
+          </div>
+          </div>
+
+        </div>
+
+
+        <!-- Main Navigation -->
+        <div>
+          <!-- Active only in settings -->
+        </div>
+
+        <!-- Network panel -->
+        <div class="row">
+          <div class="col-sm-offset-2 col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Network
               </div>
+              <div class="form-panel panel-body">
+                <form onsubmit="return false;">
+                  <div class="form-group">
+                    <label for="network-tos-txt">TOS</label>
+                    <input id="network-tos-txt" type="text" name="network-tos" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <button id="network-tos-get" class="btn btn-success btn-md get-btn">Get</button>
+                    <button id="network-tos-set" class="btn btn-success btn-md post-btn">Set</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    		</div>
-
-
-    		<!-- Main Navigation -->
-    		<div>
-
-    		</div>
-    	</div>
+      </div>
     </div>
 
     <!-- All the scripts -->
     <script type="text/javascript" src="/javascripts/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="/javascripts/onload.js"></script>
+    <script type="text/javascript" src="/javascripts/handleevents.js"></script>
   </body>
 </html>

@@ -1,8 +1,21 @@
+
+
+/**
+	Disable overflow x
+*/
 body {
-  /*padding: 50px;*/
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	overflow-x: none;
+	overflow-y: auto;
 }
 
-a {
-  color: #00B7FF;
+#top-container {
+	width: 100%;
+}
+
+/**
+ * Layout Styles
+ */
+
+.form-panel {
+	padding: 25px;
 }
